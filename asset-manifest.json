@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aanshi-juspay-assignment/static/css/main.a921cc53.css",
-    "main.js": "/aanshi-juspay-assignment/static/js/main.76476f75.js",
+    "main.js": "/aanshi-juspay-assignment/static/js/main.f4cdf9e7.js",
     "static/js/880.76591182.chunk.js": "/aanshi-juspay-assignment/static/js/880.76591182.chunk.js",
     "static/js/473.3d651dc7.chunk.js": "/aanshi-juspay-assignment/static/js/473.3d651dc7.chunk.js",
     "static/js/453.fc67794f.chunk.js": "/aanshi-juspay-assignment/static/js/453.fc67794f.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/NoteIcon.svg": "/aanshi-juspay-assignment/static/media/NoteIcon.f87287cf08b2b123185026acdfa24a3a.svg",
     "index.html": "/aanshi-juspay-assignment/index.html",
     "main.a921cc53.css.map": "/aanshi-juspay-assignment/static/css/main.a921cc53.css.map",
-    "main.76476f75.js.map": "/aanshi-juspay-assignment/static/js/main.76476f75.js.map",
+    "main.f4cdf9e7.js.map": "/aanshi-juspay-assignment/static/js/main.f4cdf9e7.js.map",
     "880.76591182.chunk.js.map": "/aanshi-juspay-assignment/static/js/880.76591182.chunk.js.map",
     "473.3d651dc7.chunk.js.map": "/aanshi-juspay-assignment/static/js/473.3d651dc7.chunk.js.map",
     "453.fc67794f.chunk.js.map": "/aanshi-juspay-assignment/static/js/453.fc67794f.chunk.js.map",
@@ -27,6 +27,6 @@
   },
   "entrypoints": [
     "static/css/main.a921cc53.css",
-    "static/js/main.76476f75.js"
+    "static/js/main.f4cdf9e7.js"
   ]
 }
