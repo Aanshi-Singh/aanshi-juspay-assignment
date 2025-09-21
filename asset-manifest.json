@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/aanshi-juspay-assignment/static/css/main.a921cc53.css",
+    "main.js": "/aanshi-juspay-assignment/static/js/main.028e9b4d.js",
+    "static/js/880.3ab5a06b.chunk.js": "/aanshi-juspay-assignment/static/js/880.3ab5a06b.chunk.js",
+    "static/js/473.a841cdf1.chunk.js": "/aanshi-juspay-assignment/static/js/473.a841cdf1.chunk.js",
+    "static/js/453.fc67794f.chunk.js": "/aanshi-juspay-assignment/static/js/453.fc67794f.chunk.js",
+    "static/js/97.7d70c247.chunk.js": "/aanshi-juspay-assignment/static/js/97.7d70c247.chunk.js",
+    "static/js/348.8a01511d.chunk.js": "/aanshi-juspay-assignment/static/js/348.8a01511d.chunk.js",
+    "static/js/629.b5e524a5.chunk.js": "/aanshi-juspay-assignment/static/js/629.b5e524a5.chunk.js",
+    "static/media/ByeWindLogo.svg": "/aanshi-juspay-assignment/static/media/ByeWindLogo.cb8d08e6906805441c17acafe46543e8.svg",
+    "static/media/WorldMap.png": "/aanshi-juspay-assignment/static/media/WorldMap.9dd43985f42b30083188.png",
+    "static/media/StarIcon.svg": "/aanshi-juspay-assignment/static/media/StarIcon.0c049a0ccd4002a833b5ac377ede3f1d.svg",
+    "static/media/NoteIcon.svg": "/aanshi-juspay-assignment/static/media/NoteIcon.f87287cf08b2b123185026acdfa24a3a.svg",
+    "index.html": "/aanshi-juspay-assignment/index.html",
+    "main.a921cc53.css.map": "/aanshi-juspay-assignment/static/css/main.a921cc53.css.map",
+    "main.028e9b4d.js.map": "/aanshi-juspay-assignment/static/js/main.028e9b4d.js.map",
+    "880.3ab5a06b.chunk.js.map": "/aanshi-juspay-assignment/static/js/880.3ab5a06b.chunk.js.map",
+    "473.a841cdf1.chunk.js.map": "/aanshi-juspay-assignment/static/js/473.a841cdf1.chunk.js.map",
+    "453.fc67794f.chunk.js.map": "/aanshi-juspay-assignment/static/js/453.fc67794f.chunk.js.map",
+    "97.7d70c247.chunk.js.map": "/aanshi-juspay-assignment/static/js/97.7d70c247.chunk.js.map",
+    "348.8a01511d.chunk.js.map": "/aanshi-juspay-assignment/static/js/348.8a01511d.chunk.js.map",
+    "629.b5e524a5.chunk.js.map": "/aanshi-juspay-assignment/static/js/629.b5e524a5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a921cc53.css",
+    "static/js/main.028e9b4d.js"
+  ]
+}
