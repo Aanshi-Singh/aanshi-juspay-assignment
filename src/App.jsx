@@ -70,7 +70,7 @@ function App() {
     <CustomThemeProvider>
       <LeftSidebarProvider>
         <SidebarProvider>
-          <Router>
+          <Router basename="/aanshi-juspay-assignment">
             <AppContent />
           </Router>
         </SidebarProvider>
