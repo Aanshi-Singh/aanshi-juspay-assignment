@@ -8,7 +8,6 @@ import CustomNavBar from './components/CustomNavBar.jsx';
 import LayoutWrapper from './components/LayoutWrapper.jsx';
 
 // Lazy load components
-const Home = React.lazy(() => import('./components/Home.jsx'));
 const OrderList = React.lazy(() => import('./components/OrderList.jsx'));
 const Analytics = React.lazy(() => import('./components/Analytics.jsx'));
 
@@ -42,7 +41,7 @@ const AppContent = () => {
             </Box>
           }>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<OrderList />} />
               <Route path="/orderlist" element={<OrderList />} />
               <Route path="/analytics" element={<Analytics />} />
             </Routes>
