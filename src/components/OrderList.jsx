@@ -6,17 +6,18 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Paper,
   Checkbox,
   Avatar,
-  Chip,
-  IconButton,
   Box,
   Typography,
-  Tooltip,
   FormControl,
   Select,
-  MenuItem
+  MenuItem,
+  Tooltip,
+  IconButton,
+  Fade,
+  Slide,
+  Grow
 } from '@mui/material';
 import { useSidebar } from '../contexts/SidebarContext.jsx';
 import { useLeftSidebar } from '../contexts/LeftSidebarContext.jsx';
@@ -24,9 +25,7 @@ import { useTheme } from '../contexts/ThemeContext.jsx';
 import {
   CalendarToday as CalendarIcon,
   Description as DescriptionIcon,
-  MoreHorizOutlined as MoreHorizOutlinedIcon,
-  KeyboardArrowLeft,
-  KeyboardArrowRight
+  MoreHorizOutlined as MoreHorizOutlinedIcon
 } from '@mui/icons-material';
 import SearchFilterBar from './SearchFilterBar.jsx';
 import CustomPagination from './CustomPagination.jsx';
@@ -36,7 +35,7 @@ const OrderList = () => {
   const { rightSidebarOpen } = useSidebar();
   const { leftSidebarOpen } = useLeftSidebar();
   const { mode } = useTheme();
-  const [orders, setOrders] = useState(mockOrders);
+  const [orders] = useState(mockOrders);
   const [selected, setSelected] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -164,39 +163,42 @@ const OrderList = () => {
   const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - filteredAndSortedOrders.length) : 0;
 
   // Calculate available width based on sidebar states
-  const leftSidebarWidth = leftSidebarOpen ? 220 : 0;
-  const rightSidebarWidth = rightSidebarOpen ? 220 : 0;
+  const leftSidebarWidth = leftSidebarOpen ? 260 : 0;
+  const rightSidebarWidth = rightSidebarOpen ? 250 : 0;
   const availableWidth = `calc(100vw - ${leftSidebarWidth + rightSidebarWidth}px)`;
 
   return (
-    <Box sx={{ 
-      width: '100%', 
-      maxWidth: availableWidth,
-      py: 2, 
-      margin: 0, 
-      paddingLeft: 4, 
-      paddingRight: 2, 
-      overflow: 'hidden',
-      boxSizing: 'border-box',
-      '&::-webkit-scrollbar': {
-        height: '8px',
-        width: '8px',
-      },
-      '&::-webkit-scrollbar-track': {
-        backgroundColor: '#f1f1f1',
-        borderRadius: '4px',
-      },
-      '&::-webkit-scrollbar-thumb': {
-        backgroundColor: '#c1c1c1',
-        borderRadius: '4px',
-        '&:hover': {
-          backgroundColor: '#a8a8a8',
+    <Fade in={true} timeout={600}>
+      <Box sx={{ 
+        width: '100%', 
+        maxWidth: availableWidth,
+        py: 2, 
+        margin: 0, 
+        paddingLeft: 4, 
+        paddingRight: 2, 
+        overflow: 'hidden',
+        boxSizing: 'border-box',
+        '&::-webkit-scrollbar': {
+          height: '8px',
+          width: '8px',
         },
-      },
-    }}>
-      <Typography  sx={{ mb: 3, fontSize: '14px', fontWeight: 600 }}>
-        Order List
-      </Typography>
+        '&::-webkit-scrollbar-track': {
+          backgroundColor: '#f1f1f1',
+          borderRadius: '4px',
+        },
+        '&::-webkit-scrollbar-thumb': {
+          backgroundColor: '#c1c1c1',
+          borderRadius: '4px',
+          '&:hover': {
+            backgroundColor: '#a8a8a8',
+          },
+        },
+      }}>
+      <Slide in={true} direction="down" timeout={800}>
+        <Typography  sx={{ mb: 3, fontSize: '14px', fontWeight: 600 }}>
+          Order List
+        </Typography>
+      </Slide>
       
       {/* Search and Filter Bar */}
       <SearchFilterBar 
@@ -206,12 +208,13 @@ const OrderList = () => {
         sortDirection={userSortDirection}
       />
 
-      <TableContainer sx={{ 
-        border: 'none', 
-        width: '100%', 
-        maxWidth: '100%',
-        overflow: 'auto',
-        maxHeight: 'calc(100vh - 200px)', // Prevent vertical overflow
+      <Grow in={true} timeout={1000}>
+        <TableContainer sx={{ 
+          border: 'none', 
+          width: '100%', 
+          maxWidth: '100%',
+          overflow: 'auto',
+          maxHeight: 'calc(100vh - 200px)', // Prevent vertical overflow
         boxSizing: 'border-box',
         overflowX: 'scroll', // Force horizontal scrollbar to always show
         overflowY: 'auto',
@@ -428,7 +431,15 @@ const OrderList = () => {
                     </TableCell>
                     <TableCell sx={{ width: '18%', py: 1, px: 0, fontSize: '12px' }}>
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                        <Avatar sx={{ width: 24, height: 24, bgcolor: '#1976d2', flexShrink: 0 }}>
+                        <Avatar 
+                          src={order.user.avatar}
+                          sx={{ 
+                            width: 24, 
+                            height: 24, 
+                            flexShrink: 0,
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                          }}
+                        >
                           {order.user.name.split(' ').map(n => n[0]).join('')}
                         </Avatar>
                         <Typography variant="body2" sx={{ fontSize: '12px' }}>{order.user.name}</Typography>
@@ -437,7 +448,6 @@ const OrderList = () => {
                     <TableCell sx={{ width: '18%', py: 1, px: 0, fontSize: '12px' }}>{order.project}</TableCell>
                     <TableCell sx={{ width: '25%', py: 1, px: 0, fontSize: '12px' }}>
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                        <DescriptionIcon sx={{ fontSize: 16, color: 'text.secondary', flexShrink: 0 }} />
                         <Typography variant="body2" sx={{ fontSize: '12px' }}>{order.address}</Typography>
                       </Box>
                     </TableCell>
@@ -478,7 +488,7 @@ const OrderList = () => {
                         </Tooltip>
                       )}
                     </TableCell>
-                  </TableRow>
+                    </TableRow>
                 );
               })}
             {emptyRows > 0 && (
@@ -489,8 +499,10 @@ const OrderList = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      </Grow>
 
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 2 }}>
+      <Slide in={true} direction="up" timeout={1200}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 2 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <Typography variant="body2" color="text.secondary">
             Rows per page:
@@ -518,7 +530,9 @@ const OrderList = () => {
           />
         </Box>
       </Box>
-    </Box>
+      </Slide>
+      </Box>
+    </Fade>
   );
 };
 

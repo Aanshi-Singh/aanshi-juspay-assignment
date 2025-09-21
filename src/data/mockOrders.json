@@ -3,7 +3,7 @@
     "id": "CM9801",
     "user": {
       "name": "Natali Craig",
-      "avatar": "/avatars/natali.jpg"
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face"
     },
     "project": "Landing Page",
     "address": "Meadow Lane Oakland",
@@ -14,7 +14,7 @@
     "id": "CM9802",
     "user": {
       "name": "Kate Morrison",
-      "avatar": "/avatars/kate.jpg"
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face"
     },
     "project": "CRM Admin pages",
     "address": "Larry San Francisco",
@@ -25,7 +25,7 @@
     "id": "CM9803",
     "user": {
       "name": "Drew Cano",
-      "avatar": "/avatars/drew.jpg"
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"
     },
     "project": "Client Project",
     "address": "Bagwell Avenue Ocala",
@@ -36,7 +36,7 @@
     "id": "CM9804",
     "user": {
       "name": "Orlando Diggs",
-      "avatar": "/avatars/orlando.jpg"
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face"
     },
     "project": "Admin Dashboard",
     "address": "Washburn Baton Rouge",
@@ -47,7 +47,7 @@
     "id": "CM9805",
     "user": {
       "name": "Andi Lane",
-      "avatar": "/avatars/andi.jpg"
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"
     },
     "project": "App Landing Page",
     "address": "Nest Lane Olivette",

@@ -112,12 +112,12 @@ const Activities = ({ sx = {} }) => {
               }}
               >
               {/* Avatar */}
-              <Box sx={{ position: 'relative', zIndex: 2 }}>
+              <Box sx={{ position: 'relative', left: 4, zIndex: 2 }}>
                 <Avatar
                   src={activity.avatar}
                   sx={{ 
                     width: 24, 
-                    height: 24,
+                    height: 24, 
                     boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
                   }}
                 />

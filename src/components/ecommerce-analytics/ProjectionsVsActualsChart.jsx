@@ -18,15 +18,17 @@ export default function ProjectionsVsActualsChart() {
   return (
     <Box
       sx={{
-        background: "#F7F9FB",
+        background: mode === 'dark' ? '#1a1a1a' : '#F7F9FB',
         borderRadius: 2, // 16px (theme.spacing(2) usually = 16px)
         p: 3,
+        border: mode === 'dark' ? '1px solid #333' : 'none',
       }}
     >
       <Typography 
         sx={{
           fontSize: '12px',
-          fontWeight: 600
+          fontWeight: 600,
+          color: mode === 'dark' ? '#fff' : 'black'
         }}
       >
         Projections vs Actuals
@@ -63,7 +65,7 @@ export default function ProjectionsVsActualsChart() {
             categoryGapRatio: 0.5,
             barGapRatio: -0.2,
             tickLabelStyle: {
-              fill: "#1C1C1C66",
+              fill: mode === 'dark' ? '#fff' : "#1C1C1C66",
               fontSize: "12px"
             }
           }
@@ -71,7 +73,7 @@ export default function ProjectionsVsActualsChart() {
         yAxis={[
           {
             tickLabelStyle: {
-              fill: "#1C1C1C66",
+              fill: mode === 'dark' ? '#fff' : "#1C1C1C66",
               fontSize: "12px",
             },
             disableLine: true,
@@ -81,11 +83,11 @@ export default function ProjectionsVsActualsChart() {
         ]}
         sx={{
           "& .MuiChartsAxis-bottom .MuiChartsAxis-line": {
-            stroke: "#C4C4C4",
+            stroke: mode === 'dark' ? '#555' : "#C4C4C4",
             strokeWidth: 1,
           },
           "& .MuiChartsLegend-root": { display: "none" },
-          background: "#F7F9FB",
+          background: mode === 'dark' ? '#1a1a1a' : "#F7F9FB",
           borderRadius: "16px",
         }}
         slotProps={{

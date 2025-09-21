@@ -10,8 +10,8 @@ const LayoutWrapper = ({ children }) => {
   const { rightSidebarOpen } = useSidebar();
   const { leftSidebarOpen } = useLeftSidebar();
   
-  const leftSidebarWidth = 220;
-  const rightSidebarWidth = 220;
+  const leftSidebarWidth = 250;
+  const rightSidebarWidth = 250;
 
   return (
     <Box sx={{ display: 'flex', height: '100vh' }}>

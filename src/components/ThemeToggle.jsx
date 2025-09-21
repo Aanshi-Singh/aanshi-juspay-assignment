@@ -1,7 +1,6 @@
 import React from 'react';
-import { IconButton, Tooltip } from '@mui/material';
-import { LightMode, DarkMode } from '@mui/icons-material';
-import { PiSunDuotone } from "react-icons/pi";
+import { IconButton, Tooltip, Fade } from '@mui/material';
+import { PiSunDuotone, PiMoonDuotone } from "react-icons/pi";
 
 import { useTheme } from '../contexts/ThemeContext.jsx';
 
@@ -14,12 +13,20 @@ const ThemeToggle = () => {
         onClick={toggleColorMode}
         sx={{
           color: mode === 'light' ? 'black' : 'white',
-          // '&:hover': {
-          //   backgroundColor: mode === 'light' ? 'rgba(0,0,0,0.04)' : 'rgba(255,255,255,0.04)',
-          // }
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          '&:hover': {
+            backgroundColor: mode === 'light' ? 'rgba(0,0,0,0.04)' : 'rgba(255,255,255,0.08)',
+            transform: 'scale(1.1) rotate(180deg)',
+          }
         }}
       >
-        {mode === 'light' ? <PiSunDuotone /> : <PiSunDuotone />}
+        <Fade in={true} timeout={300}>
+          {mode === 'light' ? (
+            <PiSunDuotone style={{ fontSize: 20, transition: 'transform 0.3s ease' }} />
+          ) : (
+            <PiSunDuotone style={{ fontSize: 20, transition: 'transform 0.3s ease' }} />
+          )}
+        </Fade>
       </IconButton>
     </Tooltip>
   );

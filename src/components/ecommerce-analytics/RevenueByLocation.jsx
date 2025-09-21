@@ -42,7 +42,7 @@ export default function RevenueByLocationFullCard() {
       width: 180,
       border: mode === 'dark' ? '1px solid #333' : 'none'
     }}>
-      <Typography fontWeight={700} fontSize={15} gutterBottom>
+      <Typography fontWeight={700} fontSize={14} gutterBottom>
         Revenue by Location
       </Typography>
       <WorldMapWithDots />

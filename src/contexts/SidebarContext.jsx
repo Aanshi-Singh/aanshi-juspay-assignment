@@ -11,7 +11,7 @@ export const useSidebar = () => {
 };
 
 export const SidebarProvider = ({ children }) => {
-  const [rightSidebarOpen, setRightSidebarOpen] = useState(false);
+  const [rightSidebarOpen, setRightSidebarOpen] = useState(true); // Default to open
 
   const toggleRightSidebar = () => {
     setRightSidebarOpen(prev => !prev);

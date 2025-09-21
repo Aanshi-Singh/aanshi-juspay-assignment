@@ -25,9 +25,11 @@ import {
 } from '@mui/icons-material';
 import AccountBoxTwoToneIcon from '@mui/icons-material/AccountBoxTwoTone';
 import ByeWindLogo from '../assets/ByeWindLogo.svg';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import DonutSmallOutlinedIcon from '@mui/icons-material/DonutSmallOutlined';
-import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
+import ChartPieSliceSvg from '../assets/ChartPieSlice.svg';
+import UserProfileIcon from '../assets/userProfileIcon.svg';
+import PeopleIcon from '../assets/peopleIcon.svg';
+import { CiCircleList } from "react-icons/ci";
+import { LiaIdCard } from "react-icons/lia";
 import RecentActorsTwoToneIcon from '@mui/icons-material/RecentActorsTwoTone';
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import { useTheme } from '../contexts/ThemeContext.jsx';
@@ -42,15 +44,14 @@ const LeftSidebar = ({ open, onClose, drawerWidth = 220 }) => {
   const location = useLocation();
 
   const navigationItems = [
-    { text: 'Home', icon: <HomeOutlinedIcon />, path: '/' },
-    { text: 'Order List', icon: <ListAltOutlinedIcon />, path: '/orderlist' },
-    { text: 'Analytics', icon: <DonutSmallOutlinedIcon />, path: '/analytics' }
+    { text: 'Analytics', icon: <img src={ChartPieSliceSvg} alt="Analytics" style={{ width: 20, height: 20 }} />, path: '/' },
+    { text: 'Order List', icon: <CiCircleList />, path: '/order-list' }
   ];
 
   const pagesData = [
     { 
       text: 'User Profile', 
-      icon: <AccountBoxTwoToneIcon />, 
+      icon: <img src={UserProfileIcon} alt="User Profile" style={{ width: 20, height: 20 }} />, 
       path: '/user-profile',
       subItems: [
         { text: 'Overview', path: '/user-profile/overview' },
@@ -60,8 +61,8 @@ const LeftSidebar = ({ open, onClose, drawerWidth = 220 }) => {
         { text: 'Followers', path: '/user-profile/followers' }
       ]
     },
-    { text: 'Account', icon: <RecentActorsTwoToneIcon />, path: '/account', hasChevron: true },
-    { text: 'Corporate', icon: <GroupsOutlinedIcon />, path: '/corporate', hasChevron: true },
+    { text: 'Account', icon: <LiaIdCard size={20}/>, path: '/account', hasChevron: true },
+    { text: 'Corporate', icon: <img src={PeopleIcon} alt="Corporate" style={{ width: 20, height: 20 }} />, path: '/corporate', hasChevron: true },
     { text: 'Blog', icon: <PiNotebookBold  size={20}/>, path: '/blog', hasChevron: true },
     { text: 'Social', icon: <PiChatsCircleDuotone  size={20}/>, path: '/social', hasChevron: true }
   ];
@@ -86,7 +87,7 @@ const LeftSidebar = ({ open, onClose, drawerWidth = 220 }) => {
   };
 
   const sidebarContent = (
-    <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column', px: 2 }}>
       {/* User Profile Section */}
       <Box sx={{ py: 3, px: 2}}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -170,6 +171,7 @@ const LeftSidebar = ({ open, onClose, drawerWidth = 220 }) => {
           <Typography 
             sx={{ 
               color: mode === 'light' ? '#1C1C1C66' : '#ffffff66',
+              fontSize: '14px',
               mb: 2,
               px: 2
             }}
@@ -209,7 +211,14 @@ const LeftSidebar = ({ open, onClose, drawerWidth = 220 }) => {
                       }
                     }}
                   >
-                    <ListItemIcon sx={{ minWidth: 32, color: mode === 'light' ? 'black' : 'white'}}>
+                    <ListItemIcon sx={{ 
+                      minWidth: 32, 
+                      color: mode === 'light' ? 'black' : 'white',
+                      '& .MuiSvgIcon-root': {
+                        fontWeight: 300,
+                        strokeWidth: 0.5
+                      }
+                    }}>
                       {item.icon}
                     </ListItemIcon>
                     <ListItemText 
@@ -280,13 +289,38 @@ const LeftSidebar = ({ open, onClose, drawerWidth = 220 }) => {
                     {(item.subItems || item.hasChevron) && (
                       item.subItems ? (
                         expandedItems.includes(item.text) ? 
-                          <ExpandMoreIcon sx={{ fontSize: 16, color: mode === 'light' ? '#1C1C1C66' : '#ffffff66', mr: 1 }} /> :
-                          <ChevronRightIcon sx={{ fontSize: 16, color: mode === 'light' ? '#1C1C1C66' : '#ffffff66', mr: 1 }} />
+                          <ExpandMoreIcon sx={{ 
+                            fontSize: 16, 
+                            color: mode === 'light' ? '#1C1C1C66' : '#ffffff66', 
+                            mr: 1,
+                            fontWeight: 300,
+                            strokeWidth: 0.5
+                          }} /> :
+                          <ChevronRightIcon sx={{ 
+                            fontSize: 16, 
+                            color: mode === 'light' ? '#1C1C1C66' : '#ffffff66', 
+                            mr: 1,
+                            fontWeight: 300,
+                            strokeWidth: 0.5
+                          }} />
                       ) : (
-                        <ChevronRightIcon sx={{ fontSize: 16, color: mode === 'light' ? '#1C1C1C66' : '#ffffff66', mr: 1 }} />
+                        <ChevronRightIcon sx={{ 
+                          fontSize: 16, 
+                          color: mode === 'light' ? '#1C1C1C66' : '#ffffff66', 
+                          mr: 1,
+                          fontWeight: 300,
+                          strokeWidth: 0.5
+                        }} />
                       )
                     )}
-                    <ListItemIcon sx={{ minWidth: 32, color: mode === 'light' ? 'black' : 'white'}}>
+                    <ListItemIcon sx={{ 
+                      minWidth: 32, 
+                      color: mode === 'light' ? 'black' : 'white',
+                      '& .MuiSvgIcon-root': {
+                        fontWeight: 300,
+                        strokeWidth: 0.5
+                      }
+                    }}>
                       {item.icon}
                     </ListItemIcon>
                     <ListItemText 

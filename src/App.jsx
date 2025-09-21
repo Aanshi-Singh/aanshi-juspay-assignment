@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, Box, Container, CircularProgress } from '@mui/material';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Box, CircularProgress, Fade, Slide } from '@mui/material';
 import { CustomThemeProvider, useTheme } from './contexts/ThemeContext.jsx';
 import { SidebarProvider } from './contexts/SidebarContext.jsx';
 import { LeftSidebarProvider } from './contexts/LeftSidebarContext.jsx';
@@ -13,8 +13,8 @@ const Analytics = React.lazy(() => import('./components/Analytics.jsx'));
 
 const AppContent = () => {
   const { mode } = useTheme();
-  const leftSidebarWidth = 220;
-  const rightSidebarWidth = 220;
+  const leftSidebarWidth = 250;
+  const rightSidebarWidth = 250;
 
   return (
     <Box sx={{ 
@@ -29,24 +29,37 @@ const AppContent = () => {
       />
       
       <LayoutWrapper>
-        <Box sx={{ mt: 3, flex: 1, overflow: 'auto', width: '100%' }}>
-          <Suspense fallback={
-            <Box sx={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              height: '200px' 
-            }}>
-              <CircularProgress />
-            </Box>
-          }>
-            <Routes>
-              <Route path="/" element={<OrderList />} />
-              <Route path="/orderlist" element={<OrderList />} />
-              <Route path="/analytics" element={<Analytics />} />
-            </Routes>
-          </Suspense>
-        </Box>
+        <Fade in={true} timeout={600}>
+          <Box sx={{ mt: 3, flex: 1, overflow: 'auto', width: '100%' }}>
+            <Suspense fallback={
+              <Slide direction="up" in={true} timeout={800}>
+                <Box sx={{ 
+                  display: 'flex', 
+                  justifyContent: 'center', 
+                  alignItems: 'center', 
+                  height: '200px',
+                  transition: 'all 0.3s ease',
+                }}>
+                  <CircularProgress 
+                    sx={{
+                      animation: 'pulse 2s infinite',
+                      '@keyframes pulse': {
+                        '0%': { opacity: 1 },
+                        '50%': { opacity: 0.5 },
+                        '100%': { opacity: 1 },
+                      }
+                    }}
+                  />
+                </Box>
+              </Slide>
+            }>
+              <Routes>
+                <Route path="/" element={<Analytics />} />
+                <Route path="/order-list" element={<OrderList />} />
+              </Routes>
+            </Suspense>
+          </Box>
+        </Fade>
       </LayoutWrapper>
     </Box>
   );
