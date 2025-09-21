@@ -1,0 +1,34 @@
+{
+  "chartData": [
+    {
+      "month": "Jan",
+      "actuals": 16,
+      "projections": 4
+    },
+    {
+      "month": "Feb", 
+      "actuals": 20,
+      "projections": 5
+    },
+    {
+      "month": "Mar",
+      "actuals": 18,
+      "projections": 3
+    },
+    {
+      "month": "Apr",
+      "actuals": 22,
+      "projections": 4
+    },
+    {
+      "month": "May",
+      "actuals": 14,
+      "projections": 3
+    },
+    {
+      "month": "Jun",
+      "actuals": 20,
+      "projections": 5
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "salesChannels": [
+    {
+      "id": 1,
+      "name": "Direct",
+      "amount": "$300.56",
+      "color": "#000000",
+      "percentage": 47.1
+    },
+    {
+      "id": 2,
+      "name": "Affiliate",
+      "amount": "$135.18",
+      "color": "#4caf50",
+      "percentage": 21.2
+    },
+    {
+      "id": 3,
+      "name": "Sponsored",
+      "amount": "$154.02",
+      "color": "#9c27b0",
+      "percentage": 24.1
+    },
+    {
+      "id": 4,
+      "name": "E-mail",
+      "amount": "$48.96",
+      "color": "#2196f3",
+      "percentage": 7.6
+    }
+  ],
+  "totalPercentage": 38.6
+}

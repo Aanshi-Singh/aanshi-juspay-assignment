@@ -1,0 +1,32 @@
+{
+  "locationData": [
+    {
+      "id": 1,
+      "name": "New York",
+      "revenue": "72K",
+      "percentage": 100,
+      "coordinates": { "lat": 40.7128, "lng": -74.0060 }
+    },
+    {
+      "id": 2,
+      "name": "San Francisco", 
+      "revenue": "39K",
+      "percentage": 54,
+      "coordinates": { "lat": 37.7749, "lng": -122.4194 }
+    },
+    {
+      "id": 3,
+      "name": "Sydney",
+      "revenue": "25K", 
+      "percentage": 35,
+      "coordinates": { "lat": -33.8688, "lng": 151.2093 }
+    },
+    {
+      "id": 4,
+      "name": "Singapore",
+      "revenue": "61K",
+      "percentage": 85,
+      "coordinates": { "lat": 1.3521, "lng": 103.8198 }
+    }
+  ]
+}

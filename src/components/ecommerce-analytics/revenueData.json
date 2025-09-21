@@ -1,0 +1,22 @@
+{
+  "revenueData": {
+    "currentWeek": {
+      "value": 58211,
+      "label": "Current Week",
+      "color": "#000000"
+    },
+    "previousWeek": {
+      "value": 68768,
+      "label": "Previous Week", 
+      "color": "#42a5f5"
+    },
+    "chartData": [
+      { "month": "Jan", "current": 13, "previous": 7 },
+      { "month": "Feb", "current": 7, "previous": 18 },
+      { "month": "Mar", "current": 10, "previous": 12 },
+      { "month": "Apr", "current": 15, "previous": 10 },
+      { "month": "May", "current": 18, "previous": 15 },
+      { "month": "Jun", "current": 20, "previous": 23 }
+    ]
+  }
+}

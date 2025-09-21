@@ -1,0 +1,167 @@
+[
+  {
+    "id": "CM9801",
+    "user": {
+      "name": "Natali Craig",
+      "avatar": "/avatars/natali.jpg"
+    },
+    "project": "Landing Page",
+    "address": "Meadow Lane Oakland",
+    "date": "Just now",
+    "status": "In Progress"
+  },
+  {
+    "id": "CM9802",
+    "user": {
+      "name": "Kate Morrison",
+      "avatar": "/avatars/kate.jpg"
+    },
+    "project": "CRM Admin pages",
+    "address": "Larry San Francisco",
+    "date": "A minute ago",
+    "status": "Complete"
+  },
+  {
+    "id": "CM9803",
+    "user": {
+      "name": "Drew Cano",
+      "avatar": "/avatars/drew.jpg"
+    },
+    "project": "Client Project",
+    "address": "Bagwell Avenue Ocala",
+    "date": "1 hour ago",
+    "status": "Pending"
+  },
+  {
+    "id": "CM9804",
+    "user": {
+      "name": "Orlando Diggs",
+      "avatar": "/avatars/orlando.jpg"
+    },
+    "project": "Admin Dashboard",
+    "address": "Washburn Baton Rouge",
+    "date": "Yesterday",
+    "status": "Approved"
+  },
+  {
+    "id": "CM9805",
+    "user": {
+      "name": "Andi Lane",
+      "avatar": "/avatars/andi.jpg"
+    },
+    "project": "App Landing Page",
+    "address": "Nest Lane Olivette",
+    "date": "Feb 2, 2023",
+    "status": "Rejected"
+  },
+  {
+    "id": "CM9806",
+    "user": {
+      "name": "Sarah Johnson",
+      "avatar": "/avatars/sarah.jpg"
+    },
+    "project": "E-commerce Platform",
+    "address": "Main Street Boston",
+    "date": "2 hours ago",
+    "status": "In Progress"
+  },
+  {
+    "id": "CM9807",
+    "user": {
+      "name": "Mike Chen",
+      "avatar": "/avatars/mike.jpg"
+    },
+    "project": "Mobile App Design",
+    "address": "Oak Avenue Seattle",
+    "date": "3 hours ago",
+    "status": "Complete"
+  },
+  {
+    "id": "CM9808",
+    "user": {
+      "name": "Emma Wilson",
+      "avatar": "/avatars/emma.jpg"
+    },
+    "project": "Portfolio Website",
+    "address": "Pine Street Denver",
+    "date": "4 hours ago",
+    "status": "Pending"
+  },
+  {
+    "id": "CM9809",
+    "user": {
+      "name": "David Brown",
+      "avatar": "/avatars/david.jpg"
+    },
+    "project": "Blog Platform",
+    "address": "Cedar Lane Austin",
+    "date": "5 hours ago",
+    "status": "Approved"
+  },
+  {
+    "id": "CM9810",
+    "user": {
+      "name": "Lisa Garcia",
+      "avatar": "/avatars/lisa.jpg"
+    },
+    "project": "SaaS Dashboard",
+    "address": "Elm Street Miami",
+    "date": "6 hours ago",
+    "status": "Rejected"
+  },
+  {
+    "id": "CM9811",
+    "user": {
+      "name": "Tom Anderson",
+      "avatar": "/avatars/tom.jpg"
+    },
+    "project": "API Documentation",
+    "address": "Maple Drive Portland",
+    "date": "7 hours ago",
+    "status": "In Progress"
+  },
+  {
+    "id": "CM9812",
+    "user": {
+      "name": "Rachel Green",
+      "avatar": "/avatars/rachel.jpg"
+    },
+    "project": "User Management",
+    "address": "Birch Street Nashville",
+    "date": "8 hours ago",
+    "status": "Complete"
+  },
+  {
+    "id": "CM9813",
+    "user": {
+      "name": "James Taylor",
+      "avatar": "/avatars/james.jpg"
+    },
+    "project": "Payment Gateway",
+    "address": "Spruce Avenue Phoenix",
+    "date": "9 hours ago",
+    "status": "Pending"
+  },
+  {
+    "id": "CM9814",
+    "user": {
+      "name": "Maria Rodriguez",
+      "avatar": "/avatars/maria.jpg"
+    },
+    "project": "Analytics Dashboard",
+    "address": "Willow Lane Las Vegas",
+    "date": "10 hours ago",
+    "status": "Approved"
+  },
+  {
+    "id": "CM9815",
+    "user": {
+      "name": "Alex Thompson",
+      "avatar": "/avatars/alex.jpg"
+    },
+    "project": "Notification System",
+    "address": "Cypress Street Orlando",
+    "date": "11 hours ago",
+    "status": "Rejected"
+  }
+]
