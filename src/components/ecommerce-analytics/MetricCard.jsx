@@ -20,17 +20,21 @@ const MetricCard = ({
   sx = {}
 }) => {
   const { mode } = useTheme();
+  
+  // Check if this is Orders (id: 2) or Revenue (id: 3) card for dark theme
+  const isSecondOrThirdCard = title === 'Orders' || title === 'Revenue';
   const getTrendIcon = () => {
+    const iconColor = mode === 'dark' && isSecondOrThirdCard ? 'white' : 'black';
     if (trend === 'down') {
-      return <TrendingDownIcon sx={{ fontSize: 16, color: 'black' }} />;
+      return <TrendingDownIcon sx={{ fontSize: 16, color: iconColor }} />;
     }
-    return <TrendingUpOutlinedIcon sx={{ fontSize: 16, color: 'black' }} />;
+    return <TrendingUpOutlinedIcon sx={{ fontSize: 16, color: iconColor }} />;
   };
 
   return (
     <Card
       sx={{
-        backgroundColor: backgroundColor,
+        backgroundColor: mode === 'dark' && isSecondOrThirdCard ? '#FFFFFF0D' : backgroundColor,
         borderRadius: 2, // 16px
         boxShadow: 'none',
         border: 'none',
@@ -50,7 +54,7 @@ const MetricCard = ({
           {/* Title */}
           <Typography 
             sx={{ 
-              color: 'black',
+              color: mode === 'dark' && isSecondOrThirdCard ? 'white' : 'black',
               fontWeight: 600,
               fontSize: '14px',
               fontStyle: 'normal'
@@ -71,7 +75,7 @@ const MetricCard = ({
                 fontWeight: 600,
                 fontSize: '24px',
                 fontStyle: 'normal',
-                color: 'black',
+                color: mode === 'dark' && isSecondOrThirdCard ? 'white' : 'black',
                 mr: 1,
               }}
             >
@@ -83,7 +87,7 @@ const MetricCard = ({
                 sx={{ 
                   fontSize: '12px',
                   fontWeight: 400,
-                  color: 'black'
+                  color: mode === 'dark' && isSecondOrThirdCard ? 'white' : 'black'
                 }}
               >
                 {change}

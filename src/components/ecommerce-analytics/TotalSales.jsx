@@ -10,14 +10,27 @@ const salesData = [
   { label: "E-mail", value: 48.96, color: "#B1E3FF" }
 ];
 
+const getSalesDataForTheme = (mode) => {
+  if (mode === 'dark') {
+    return [
+      { label: "Direct", value: 300.56, color: "#C6C7F8" },
+      { label: "Affiliate", value: 135.18, color: "#BAEDBD" },
+      { label: "Sponsored", value: 154.02, color: "#95A4FC" },
+      { label: "E-mail", value: 48.96, color: "#B1E3FF" }
+    ];
+  }
+  return salesData;
+};
+
 export default function TotalSales() {
   const { mode } = useTheme();
+  const themeSalesData = getSalesDataForTheme(mode);
 
   return (
     <Box sx={{
       bgcolor: mode === 'dark' ? '#1a1a1a' : '#F7F9FB',
       borderRadius: 2, // 16px
-      p: 3,
+      p: 2, // 16px padding
       width: 240,
       border: mode === 'dark' ? '1px solid #333' : 'none',
       display: 'flex',
@@ -28,7 +41,7 @@ export default function TotalSales() {
         sx={{ 
           fontWeight: 600, 
           fontSize: '14px',
-          color: 'black',
+          color: mode === 'dark' ? 'white' : 'black',
           mb: 2
         }}
       >
@@ -39,7 +52,7 @@ export default function TotalSales() {
         <PieChart
           series={[
             {
-              data: salesData.map((item) => ({
+              data: themeSalesData.map((item) => ({
                 value: item.value,
                 // label: item.label,
                 color: item.color
@@ -89,7 +102,7 @@ export default function TotalSales() {
       </Box>
       
       <Stack spacing={1} sx={{ width: '100%' }}>
-        {salesData.map((item, idx) => (
+        {themeSalesData.map((item, idx) => (
           <Box key={item.label} sx={{ 
             display: "flex", 
             alignItems: "center", 
